@@ -55,7 +55,7 @@ form.addEventListener('submit', (e) => {
     const formData = new FormData();
     formData.append('userName', e.target.userName.value);
     formData.append('model', e.target.model.files[0]);
-    fetch('http://localhost:3000/form-submit', {
+    fetch('http://localhost:3000/model', {
         method: 'POST',
         body: formData,
     }).then((res) => console.log(res))

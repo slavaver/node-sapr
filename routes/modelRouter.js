@@ -1,8 +1,10 @@
 const {Router} = require('express');
+const {upload} = require('../middlewares/multer.middleware')
+const {postModel} = require('../controllers/model.controller')
 
 const modelRouter = new Router();
+modelRouter.post('/', upload, postModel)
 
-modelRouter.get('/', (req, res) => res.send('model root'));
-modelRouter.get('/:id', (req, res) => res.send(`/:id ${req.params.id}`));
 
 module.exports = modelRouter;
+
