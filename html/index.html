@@ -53,17 +53,15 @@
         form.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const formData = new FormData();
-            formData.append('userName', e.target.userName.value);
-            formData.append('model', e.target.model.files[0]);
-            fetch('http://localhost:3000/form-submit', {
-                method: 'POST',
-                body: formData,
-            })
-            .then((res) => JSON.parse(res))
-            .then(json => console.log(json))
-            .catch((err) => console.log(err));
-        });
+    const formData = new FormData();
+    formData.append('userName', e.target.userName.value);
+    formData.append('model', e.target.model.files[0]);
+    fetch('http://localhost:3000/model', {
+        method: 'POST',
+        body: formData,
+    }).then((res) => console.log(res))
+    .catch((err) => console.log(err));
+});
     </script>
 </body>
 
