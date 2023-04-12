@@ -1,0 +1,13 @@
+GET /comments HTTP/1.1
+Host: 127.0.0.1:3000
+
+###
+
+POST /comments HTTP/1.1
+Host: 127.0.0.1:3000
+Content-Type: application/json
+
+{
+  "name": "Vlad",
+  "text": "My comment final"
+}
