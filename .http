@@ -11,3 +11,11 @@ Content-Type: application/json
   "name": "Vlad",
   "text": "My comment final"
 }
+
+###
+GET /comments/1 HTTP/1.1
+Host: 127.0.0.1:3000
+
+###
+GET /comments/64369a98553b4935bb634698 HTTP/1.1
+Host: 127.0.0.1:3000

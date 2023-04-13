@@ -12,6 +12,8 @@ app
   .get(commentsController.getComments)
   .post(express.json(), commentsController.postComments);
 
+app.get("/comments/:id", commentsController.getComment);
+
 app.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
